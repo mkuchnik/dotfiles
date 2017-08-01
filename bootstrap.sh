@@ -9,6 +9,8 @@ function doIt() {
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
 		--exclude "bootstrap.sh" \
+		--exclude "preinstall.sh" \
+		--exclude "postinstall.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
@@ -21,8 +23,9 @@ else
 	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 	echo "";
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		. install_vundle.sh;
+		. preinstall.sh;
 		doIt;
+		. postinstall.sh;
 	fi;
 fi;
 unset doIt;

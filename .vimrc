@@ -108,3 +108,11 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+" Vundle section
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" Required vundle plugin
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'leafgarland/typescript-vim'
+call vundle#end()

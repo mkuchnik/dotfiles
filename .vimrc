@@ -43,6 +43,9 @@ set directory=~/.vim/swaps
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
+" Set 80 character column line width
+set textwidth=80
+set colorcolumn=+1
 
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*

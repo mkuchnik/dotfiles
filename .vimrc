@@ -7,14 +7,17 @@ call vundle#begin()
 " Required vundle plugin
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'morhetz/gruvbox'
 call vundle#end()
 filetype plugin indent on
 " End Vundle
 
+set termguicolors
+colorscheme gruvbox
 " Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+" colorscheme solarized
+" set background=dark
+" let g:solarized_termtrans=1
 
 " Make Vim more useful
 set nocompatible

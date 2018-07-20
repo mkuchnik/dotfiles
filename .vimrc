@@ -8,16 +8,28 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'morhetz/gruvbox'
+Plugin 'vim-syntastic/syntastic'
 call vundle#end()
 filetype plugin indent on
 " End Vundle
 
+" Themes
 set termguicolors
 colorscheme gruvbox
 " Use the Solarized Dark theme
 " colorscheme solarized
 " set background=dark
 " let g:solarized_termtrans=1
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['flake8']
 
 " Make Vim more useful
 set nocompatible

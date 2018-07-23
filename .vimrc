@@ -18,7 +18,7 @@ set termguicolors
 colorscheme gruvbox
 " Use the Solarized Dark theme
 " colorscheme solarized
-" set background=dark
+set background=dark
 " let g:solarized_termtrans=1
 
 " Syntastic settings

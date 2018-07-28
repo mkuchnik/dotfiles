@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'neomake/neomake'
 call vundle#end()
 filetype plugin indent on
 " End Vundle
@@ -30,6 +31,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_tex_checkers = ['chktex']
+
+" Neomake settings
+call neomake#configure#automake('w')
 
 " Make Vim more useful
 set nocompatible

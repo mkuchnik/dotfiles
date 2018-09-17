@@ -10,6 +10,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'neomake/neomake'
+Plugin 'Vimjas/vim-python-pep8-indent'
 call vundle#end()
 filetype plugin indent on
 " End Vundle
